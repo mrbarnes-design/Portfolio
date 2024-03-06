@@ -1,3 +1,6 @@
 import '../styles/styles.css';
+import Button from './Button';
 
-  alert('Hello world!!!')
+let button = new Button();
+
+

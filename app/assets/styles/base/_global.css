@@ -6,3 +6,18 @@ body {
   font-family: 'Roboto', sans-serif;
   color: $mainBlue;
 }
+
+img {
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  position: absolute;
+  top: 55px;
+  left: 230px
+}
+
+
+
