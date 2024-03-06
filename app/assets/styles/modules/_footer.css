@@ -1,0 +1,27 @@
+.footer {
+    background-color: $mainOrange;
+}
+
+.footer p {
+    text-align: center;
+    padding: 0;
+
+    @mixin atSmall {
+        text-align: center;
+        padding: 10px;
+    }
+}
+ 
+.social-icons {
+
+&--footer {
+    scale: .7;
+    margin-left: 25px;
+
+    @mixin atSmall {
+    scale: .8;
+    margin-left: 180px;
+    padding-top: 0;
+    }
+}
+}

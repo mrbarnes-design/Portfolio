@@ -3,4 +3,8 @@
 @import "base/_mixins";
 @import "base/_global";
 @import "base/_btn.css";
-@import "modules/_nav.css"
+@import "modules/_nav.css";
+@import "modules/_about.css";
+@import "modules/_experience.css";
+@import "modules/_footer.css";
+@import "modules/_header.css"

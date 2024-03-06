@@ -1,0 +1,26 @@
+.experience {
+    display: block;
+    margin-left: 50px;
+
+    @mixin atSmall {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0px;
+    margin-left: 10px
+    }
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  color: $mainOrange;
+}
+
+#project-image {
+    border-radius: 10%;
+}
+
+div {
+    padding-right: 0;
+}
