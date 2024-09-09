@@ -1,5 +1,6 @@
 body {
   color: $mainBlue;
+  font-family: 'Roboto', sans-serif;
 }
 
 img {

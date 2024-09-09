@@ -2,6 +2,29 @@
 
     &--pull-right {
         float: right;
-        width: 100%;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+    }
+
+    li {
+        list-style: none;
+        float: left;
+        padding-right: 20px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        padding: 15px 0;
+    }
+
+    a:hover {
+        color: $mainOrange;
     }
 }

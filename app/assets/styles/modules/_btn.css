@@ -1,0 +1,10 @@
+.btn {
+    color: #fff;
+    text-decoration: none;
+    background-color: $mainBlue;
+    padding: 10px 15px;
+
+    &--pull-right {
+        float: right;
+    }
+}
