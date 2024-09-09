@@ -5,6 +5,10 @@
     padding: 10px 15px;
 
     &--pull-right {
-        float: right;
+        
+
+        @mixin atMedium {
+            float: right;
+        }
     }
 }
