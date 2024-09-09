@@ -1,7 +1,5 @@
 import '../styles/styles.css';
-import Button from './Button';
 
-let button = new Button();
-
-
-alert('Hello world!!!')
+if(module.hot) {
+    module.hot.accept()
+}

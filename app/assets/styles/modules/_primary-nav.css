@@ -1,0 +1,7 @@
+.primary-nav {
+
+    &--pull-right {
+        float: right;
+        width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+.site-header {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(47, 85, 114, .3);
+
+    &__image {
+        display: inline-block;
+        border-radius: 1000%;
+        scale: .2;
+    }
+}
