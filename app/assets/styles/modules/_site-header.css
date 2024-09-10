@@ -29,6 +29,10 @@
             border-radius: 1000%;
             scale: .5;
 
+            @mixin atSmall {
+                scale: 1;
+            }
+
             @mixin atMedium {
                 scale: 2;
             }
