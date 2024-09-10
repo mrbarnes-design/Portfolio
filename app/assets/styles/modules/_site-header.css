@@ -15,7 +15,7 @@
 
     &__logo {
         position: absolute;
-        top: 0;
+        top: -30%;
         transform: translateX(-50%);
         left: 50%;
 
@@ -41,7 +41,7 @@
         transition: all .3s ease-out;
         position: relative;
         z-index: -10;
-        padding-top: 140px;
+        padding-top: 50px;
         text-align: center;
 
         @mixin atMedium {
