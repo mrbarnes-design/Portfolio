@@ -11,4 +11,12 @@
             float: right;
         }
     }
+
+    &--orange {
+        background-color: $mainOrange;
+    }
+
+    &--small {
+        padding: 3px 8px;
+    }
 }
