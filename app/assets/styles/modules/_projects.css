@@ -1,0 +1,43 @@
+.projects {
+       grid-column: span 12;
+       grid-row: 1;
+       align-self: center;
+
+    @mixin atMedium {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    &__one {
+        grid-column: span 4;
+        grid-row: 1;
+        
+    }
+
+    &__two {
+        grid-column: span 4;
+        grid-row: 1;
+    }
+
+    &__three {
+        grid-column: span 4;
+        grid-row: 1;
+    }
+
+    &--image {
+        margin-bottom: 2rem;
+    }
+
+    &__last-image {
+        margin-bottom: 2rem;
+    }
+
+    &__second-image {
+        margin-bottom: 2rem;
+    }
+
+    &__first-image {
+        margin-bottom: 2rem;
+    }
+}
+

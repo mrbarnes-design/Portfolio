@@ -24,8 +24,9 @@
         }
 
         @mixin atMedium {
+            top: 90%;
             left: auto;
-            transform: translateX(0)
+            transform: translateX(35%)
         }
         
         img {
