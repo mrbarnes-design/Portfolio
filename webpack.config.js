@@ -2,8 +2,18 @@ const currentTask = process.env.npm_lifecycle_event
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const fse = require("fs-extra")
 
 const postCSSPlugins = [require("postcss-import"), require("postcss-mixins"), require("postcss-simple-vars"), require("postcss-nested"), require("postcss-hexrgba"), require("autoprefixer")]
+
+class RunAfterCompile {
+  apply(compiler) {
+    compiler.hooks.done.tap("Copy images", function () {
+      fse.copySync("./app/assets/images", "./docs/assets/images")
+    })
+  }
+}
 
 let cssConfig = {
   test: /\.css$/i,
@@ -13,8 +23,21 @@ let cssConfig = {
   ]
 }
 
+let pages = fse
+  .readdirSync("./app")
+  .filter(function (file) {
+    return file.endsWith(".html")
+  })
+  .map(function (page) {
+    return new HtmlWebpackPlugin({
+      filename: page,
+      template: `./app/${page}`
+    })
+  })
+
 let config = {
   entry: "./app/assets/scripts/App.js",
+  plugins: pages,
   module: {
     rules: [cssConfig]
   }
@@ -39,6 +62,12 @@ if (currentTask == "dev") {
 }
 
 if (currentTask == "build") {
+  config.module.rules.push({
+    test: /\.js$/,
+    exclude: /(node_modules)/,
+    use: { loader: "babel-loader", options: { presets: ["@babel/preset-env"] } }
+  })
+
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   config.output = {
     filename: "[name].[chunkhash].js",
@@ -52,7 +81,7 @@ if (currentTask == "build") {
     minimize: true,
     minimizer: [`...`, new CssMinimizerPlugin()]
   }
-  config.plugins = [new MiniCssExtractPlugin({ filename: "styles.[chunkhash].css" })]
+  config.plugins.push(new MiniCssExtractPlugin({ filename: "styles.[chunkhash].css" }), new RunAfterCompile())
 }
 
 module.exports = config
