@@ -32,7 +32,7 @@
         img {
             border: 10px solid rgba(47, 85, 114, .3);
             border-radius: 1000%;
-            scale: .5;
+            scale: .7;
 
             @mixin atSmall {
                 scale: 1;
