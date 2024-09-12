@@ -20,7 +20,7 @@
         left: 50%;
 
         @mixin atSmall {
-            top: 10;
+            top: 20;
         }
 
         @mixin atMedium {
@@ -32,10 +32,11 @@
         img {
             border: 10px solid rgba(47, 85, 114, .3);
             border-radius: 1000%;
-            scale: .7;
+            scale: .5;
 
             @mixin atSmall {
-                scale: 1;
+                scale: 1.2;
+                padding-top: ;
             }
 
             @mixin atMedium {
@@ -52,6 +53,10 @@
         z-index: -10;
         padding-top: 30px;
         text-align: center;
+
+        @mixin atSmall {
+            padding-top: 60px;
+        }
 
         @mixin atMedium {
             opacity: 1;

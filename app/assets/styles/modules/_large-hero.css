@@ -23,6 +23,12 @@
         font-size: 1.9rem;
         margin: 0;
 
+        @mixin atSmall {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin: 0;
+        }
+
         @mixin atMedium {
         font-weight: 300;
         font-size: 4.8rem;
@@ -34,6 +40,12 @@
         font-weight: 300;
         font-size: 1.2rem;
         margin: 0;
+
+        @mixin atSmall {
+        font-weight: 200;
+        font-size: 1.5rem;
+        margin: 0;
+        }
 
         @mixin atMedium {
         font-weight: 300;
