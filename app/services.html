@@ -1,47 +1,38 @@
-<html lang="en"></html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="Web design, user experience, and development services by Vernon Barnes.">
+  <title>Services — Vernon Barnes</title>
 </head>
-<body>  
- <header class="site-header">
-  <div class="wrapper">
-    <div class="site-header__logo">
-      <a href="/"><img src="assets/images/vernon.jpg" width="100px" height="100px" alt=""></a>
-    </div>
-    <div class="site-header__menu-icon">
-      <div class="site-header__menu-icon__middle"></div>
-    </div>
-    <div class="site-header__menu-content">
-      <div class="site-header__btn-container">
-        <a href="" class="btn btn--pull-right">Get in touch</a>
-      </div>
-      <nav class="primary-nav primary-nav--pull-right">
-        <ul>
-          <li><a href="/">About me</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
- </header>
- <div class="large-hero">
-  <img src="https://images.pexels.com/photos/28104342/pexels-photo-28104342/free-photo-of-a-dirt-road-with-snow-on-it-and-a-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="1920" height="520px" alt="" class="large-hero__image">
-  <div class="large-hero__text-content">
-    <h1 class="large-hero__title">Vernon Barnes!</h1>
-    <h2 class="large-hero__subtitle">Web Designer/Developer</h2>
-    <p class="large-hero__description">UI/UX Designer, passionate about creating immersive web experiences.</p>
-    <a href="#" class="large-hero__btn">Get in touch</a>
-  </div>
-</div>
-  <h1>Services content goes here.</h1>
-<footer class="site-footer">
- <div class="wrapper wrapper--medium">
-  <p><span class="site-footer__text">Copright &copy; 2024 Vernon Barnes - Portfolio. All rights reserved.</span> <a href="#" class="btn btn--small btn--orange">Get in touch</a></p>
- </div>
-</footer>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vernon Barnes, home"><span class="brand__mark">VB<span>.</span></span><span class="brand__name">Vernon Barnes<br><small>Independent creative</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+      <a href="index.html">About</a><a href="portfolio.html">Selected work</a><a class="is-current" href="services.html">Services</a><a class="nav-contact" href="contact.html">Let’s talk <span>↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero page-hero--services">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> The right kind of help</p>
+      <h1>Small team.<br><em>Big picture.</em></h1>
+      <p class="page-hero__intro">From a first spark to the finished site, I bring the right mix of thinking, design, and code to make your next move a good one.</p>
+      <span class="page-hero__index">SERVICES — 2026</span>
+    </section>
+    <section class="services-list section-pad">
+      <p class="eyebrow">Ways we can work together <span class="eyebrow__rule"></span> 01 / 03</p>
+      <article class="service-row"><span class="service-row__number">01</span><div><h2>Digital direction</h2><p>Clarity before pixels. Together, we’ll find the right story, define the audience, and map out a digital experience that has somewhere meaningful to go.</p><div class="service-tags"><span>Discovery</span><span>Strategy</span><span>Content direction</span></div></div><span class="service-row__mark">↗</span></article>
+      <article class="service-row"><span class="service-row__number">02</span><div><h2>Web design</h2><p>Distinctive, considered design that puts people first. Every detail earns its place, and every screen feels like it belongs to your brand.</p><div class="service-tags"><span>UI / UX</span><span>Responsive design</span><span>Prototyping</span></div></div><span class="service-row__mark">↗</span></article>
+      <article class="service-row"><span class="service-row__number">03</span><div><h2>Web development</h2><p>Thoughtful design, brought to life with clean, dependable code. Fast, accessible, easy to use, and ready to grow alongside you.</p><div class="service-tags"><span>Front-end</span><span>WordPress</span><span>Ongoing care</span></div></div><span class="service-row__mark">↗</span></article>
+      <div class="services-footnote"><span class="note-line"></span><p>One project, one focused partnership.<br>Good work comes from working closely.</p></div>
+    </section>
+    <section class="closing-cta"><p class="eyebrow">Have a good one?</p><h2>Let’s make<br>it <em>happen.</em></h2><a class="button button--light" href="contact.html">Tell me about it <span>↗</span></a><span class="closing-cta__ornament" aria-hidden="true">✳</span></section>
+  </main>
+  <footer class="site-footer">
+    <a class="brand brand--footer" href="index.html"><span class="brand__mark">VB<span>.</span></span><span class="brand__name">Vernon Barnes<br><small>Independent creative</small></span></a><span class="footer-note">Thoughtful digital, made with care.</span><div class="footer-links"><a href="mailto:hello@vernonbarnes.com">Email ↗</a><a href="portfolio.html">Work ↗</a><span>© 2026 Vernon Barnes</span></div>
+  </footer>
 </body>
 </html>

@@ -1,20 +1,31 @@
 class MobileMenu {
     constructor() {
-        this.icon = document
-        .querySelector('.site-header__menu-icon')
-        this.nav = document.querySelector('.site-header__menu-content')
-        this.siteHeader = document.querySelector('.site-header')
+        this.icon = document.querySelector('.menu-toggle')
+        this.nav = document.querySelector('.site-nav')
+
+        if (!this.icon || !this.nav) return
+
         this.events()
     }
 
     events() {
-        this.icon.addEventListener('click', ()=> this.toggleTheMenu())
+        this.icon.addEventListener('click', () => this.toggleTheMenu())
+        this.nav.addEventListener('click', event => {
+            if (event.target.closest('a')) this.setMenuOpen(false)
+        })
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') this.setMenuOpen(false)
+        })
     }
 
     toggleTheMenu() {
-        this.nav.classList.toggle('site-header__menu-content--is-visible')
-        this.siteHeader.classList.toggle('site-header--is-expanded')
-        this.icon.classList.toggle('site-header__menu-icon--close-x')
+        this.setMenuOpen(this.icon.getAttribute('aria-expanded') !== 'true')
+    }
+
+    setMenuOpen(isOpen) {
+        this.nav.classList.toggle('is-open', isOpen)
+        this.icon.setAttribute('aria-expanded', String(isOpen))
+        this.icon.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation')
     }
 }
 
